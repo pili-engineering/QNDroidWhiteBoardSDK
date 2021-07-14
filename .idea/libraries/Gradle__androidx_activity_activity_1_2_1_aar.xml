@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.activity:activity:1.2.1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/95d798d898c49351546961f5e66f7d01/jetified-activity-1.2.1/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/77f8f2e414a14656b58c186b1266854d/jetified-activity-1.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/09b8c125db5a1b0ac7991cb9420fb4a4/jetified-activity-1.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e0c586be042e3bdfd354aff7428e448c/jetified-activity-1.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6b2403aabc3a2ef50ee97e2b29bf7322/jetified-activity-1.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0a39ba94693886dd03787c94a3239869/jetified-activity-1.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/84cb337d84313fa93e821a983c2f7a63/jetified-activity-1.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/95d798d898c49351546961f5e66f7d01/jetified-activity-1.2.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/95d798d898c49351546961f5e66f7d01/jetified-activity-1.2.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/95d798d898c49351546961f5e66f7d01/jetified-activity-1.2.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.activity/activity/1.2.1/c8076fd9c975393c2eb93372741f7e1cfaa344a2/activity-1.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

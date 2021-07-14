@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="room_status_names">
+        <item>未连接</item>
+        <item>正在连接</item>
+        <item>已连接</item>
+        <item>连接失败</item>
+        <item>正在重连</item>
+    </string-array>
+
+    <string-array name="board_theme_names">
+        <item>白</item>
+        <item>黑</item>
+        <item>绿</item>
+        <item>透明</item>
+        <item>未知</item>
+    </string-array>
+
+</resources>
