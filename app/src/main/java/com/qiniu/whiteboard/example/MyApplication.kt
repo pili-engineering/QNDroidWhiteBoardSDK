@@ -3,6 +3,7 @@
 package com.qiniu.whiteboard.example
 import android.app.Application
 import com.qiniu.droid.whiteboard.QNWhiteBoard
+import com.tencent.bugly.crashreport.CrashReport
 import com.uuzuche.lib_zxing.activity.ZXingLibrary
 
 class MyApplication : Application(){
@@ -14,5 +15,6 @@ class MyApplication : Application(){
         ZXingLibrary.initDisplayOpinion(applicationContext)
         QNWhiteBoard.init(this, true)
         QNWhiteBoard.setDefaultInputMode(NormalPenStyle().inputConfig)
+        CrashReport.initCrashReport(this, "be697c06e2", true);
     }
 }
