@@ -101,8 +101,11 @@ dependencies {
     implementation 'com.github.bumptech.glide:okhttp3-integration:4.12.0'
     implementation("com.squareup.okhttp3:okhttp:4.8.1")
     implementation ('com.qiniu:happy-dns:0.2.17')
-    implementation (name:'qndroid-whiteboard-1.0.4-beta',ext:"aar")
-   // implementation project(":qiniuwhiteboard")
+    implementation (name:'qndroid-whiteboard-1.0.5-beta',ext:"aar")
+  //  implementation project(":qiniuwhiteboard")
     implementation ('com.aliyun.dpa:oss-android-sdk:2.9.6')
     implementation 'cn.yipianfengye.android:zxing-library:2.2'
+    implementation 'com.tencent.bugly:crashreport:3.3.92' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    implementation 'com.tencent.bugly:nativecrashreport:3.9.1' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+
 }
