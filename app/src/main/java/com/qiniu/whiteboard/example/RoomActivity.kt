@@ -21,8 +21,7 @@ import java.io.File
 import com.qiniu.droid.whiteboard.QNWhiteBoard
 import com.qiniu.whiteboard.example.databinding.ActivityRoomBinding
 import com.qiniu.droid.whiteboard.model.FileConfig
-import com.qiniu.droid.whiteboard.model.InputConfig
-import com.qiniu.droid.whiteboard.type.LaserType
+import com.qiniu.droid.whiteboard.model.JoinConfig
 import com.qiniu.droid.whiteboard.type.WidgetType
 
 /**
@@ -49,12 +48,14 @@ class RoomActivity : AppCompatActivity() {
      */
     private val viewModel by viewModels<RoomViewModel>()
 
+    private val mRtcActivity  by viewModels<RtcViewModel>()
     /**
      * 视图绑定
      */
     private val binding by lazy {
         ActivityRoomBinding.inflate(layoutInflater)
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,7 +76,9 @@ class RoomActivity : AppCompatActivity() {
             })
         }
 
-        QNWhiteBoard.joinRoom(intent.getParcelableExtra(ROOM_DATA_TAG)!!)
+        val joinConfig = intent.getParcelableExtra<JoinConfig>(ROOM_DATA_TAG)!!
+        QNWhiteBoard.joinRoom(joinConfig)
+        mRtcActivity.join(joinConfig.token)
     }
 
     override fun onContentChanged() {
@@ -374,9 +377,7 @@ class RoomActivity : AppCompatActivity() {
                 val padding = 20
                 val w=QNWhiteBoard.getViewport().size.displayWidth //画布宽
                 val h=QNWhiteBoard.getViewport().size.displayHeight //画布高
-
                 QNWhiteBoard.insertFile(FileConfig(File(path),"",padding.toFloat(),0f,w-padding*2 ,h ) )
-                QNWhiteBoard.setInputMode(InputConfig.laserPen(LaserType.LASER_DOT))
             }else{
                 Log.v(TAG, "openGallery path:$path")
 

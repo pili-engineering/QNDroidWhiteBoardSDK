@@ -20,10 +20,8 @@ class MainActivity : AppCompatActivity() {
 
     private var mRoomTokenEditText: EditText? = null
 
-    var token1 =
-        "QxZugR8TAhI38AiJ_cptTl3RbzLyca3t-AAiH-Hh:GwzC49F8kBR4uyfSVYNODT2dPGM=:eyJhcHBJZCI6ImQ4ZHJlOHcxcCIsImV4cGlyZUF0IjoxNjI3NjU1MzgyLCJwZXJtaXNzaW9uIjoidXNlciIsInJvb21OYW1lIjoicXdlMTIiLCJ1c2VySWQiOiIxMjMifQ=="
-    var token2 =
-        "QxZugR8TAhI38AiJ_cptTl3RbzLyca3t-AAiH-Hh:Tj2or5C0y3suQ_WXqnZUB7BtrXU=:eyJhcHBJZCI6ImQ4ZHJlOHcxcCIsImV4cGlyZUF0IjoxNjI3NzQxODE5LCJwZXJtaXNzaW9uIjoidXNlciIsInJvb21OYW1lIjoicXdlMTIiLCJ1c2VySWQiOiJzeGRhc2QifQ=="
+    var token1 = "QxZugR8TAhI38AiJ_cptTl3RbzLyca3t-AAiH-Hh:HX9jtooyqlqyq0iN9ERM2H-i1S0=:eyJhcHBJZCI6ImQ4ZHJlOHcxcCIsImV4cGlyZUF0IjoxNjI3NzA0NDA0LCJwZXJtaXNzaW9uIjoidXNlciIsInJvb21OYW1lIjoiMTIzNCIsInVzZXJJZCI6ImFkc2FkYWRhZCJ9"
+    var token2 ="QxZugR8TAhI38AiJ_cptTl3RbzLyca3t-AAiH-Hh:9ifJL3qnKSTAwuA1iPmDuOgnkRY=:eyJhcHBJZCI6ImQ4ZHJlOHcxcCIsImV4cGlyZUF0IjoxNjI3NzA0NDYwLCJwZXJtaXNzaW9uIjoidXNlciIsInJvb21OYW1lIjoiMTIzNCIsInVzZXJJZCI6ImFkc2Fkc2Fkc2EifQ=="
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
