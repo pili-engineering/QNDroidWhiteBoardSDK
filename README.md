@@ -982,19 +982,48 @@ office文件需要在线转换格式，所以画面呈现会相对慢一些。
 |----|----|
 |[info](#activewidgetinfo)|当前激活的widget信息，null表示用户还没有操作，比如刚刚翻页后|
 
-### onFilePageChanged
 
-`void onFilePageChanged(@NonNull ActiveWidgetInfo info)`
 
-文件页改变
+### onPageCleaned
 
-当文件被翻页时触发，同时会触发[onWidgetActive](#onwidgetactive)。
-当前仅被激活的文件发生翻页时才会收到此事件。
-文件翻页可通过调用[jumpFilePage](#jumpfilepage)实现。
+` void onPageCleaned(@NonNull String pageId)`
+
+清空白板完成回调
+
+使用[cleanBoardPage](#cleanBoardPage)后回调。
 
 |参数|描述|
 |----|----|
-|[info](#activewidgetinfo)|新的widget信息|
+| pageId |被清空的页面ID|
+
+
+
+### onPageCleaned
+
+` void onPageCleaned(@NonNull String pageId)`
+
+清空白板完成回调
+
+使用[cleanBoardPage](#cleanBoardPage)后回调。
+
+|参数|描述|
+|----|----|
+| pageId |被清空的页面ID|
+
+
+
+### onFileScrolled
+
+`void onFileScrolled(@NonNull WidgetScrollInfo info)`
+
+文件滑动到上下顶部边缘监听
+
+
+|参数|描述|
+|----|----|
+|[info](#widgetScrollInfo)|滑动信息|
+
+
 
 ### onWidgetActionEvent
 
@@ -1040,6 +1069,7 @@ widget被执行了某些关键动作
 |参数|描述|
 |----|----|
 |bitmap|截图得到的位图，如果为null表示截图失败，位图大小等于[QNWhiteBoardView](#whiteboardview)的像素大小|
+
 
 ## QNWhiteBoardView
 
@@ -1309,18 +1339,30 @@ widget类型，白板中的一切都是widget
 |GEOMETRY|几何图形，由[InputConfig.geometry](#inputconfiggeometry)模式绘制|
 |SELECTION|选择框，由[InputConfig.select](#inputconfigselect)模式选中的内容|
 
-## WidgetAction
+## WidgetType
 
-widget动作类型
+widget类型，白板中的一切都是widget
 
-在[onWidgetActionEvent](#onwidgetactionevent)中指示widget具体发生的动作事件。
-
-|名称|事件|
+|名称|类型|
 |----|----|
-|UPLOAD|开始上传/插入新widget|
-|DELETE|删除widget|
-|SUCCESSFUL|widget加载成功|
-|FAILED|widget加载失败|
+|BOARD|白板|
+|FILE|文件，包括pdf和office|
+|IMAGE|图片，jpg和png|
+|GEOMETRY|几何图形，由[InputConfig.geometry](#inputconfiggeometry)模式绘制|
+|SELECTION|选择框，由[InputConfig.select](#inputconfigselect)模式选中的内容|
+
+## WidgetScrollInfo
+
+文件滑动信息
+
+在[onFileScrolled](#onFileScrolled)中回调。
+
+
+|参数|类型|描述|
+|----|----|----|
+|widgetId|String|文件widgetId |
+|scrollToTop|int|1代表到顶|
+|scrollToBottom|int|1代表到底|
 
 
 ### 混淆配置

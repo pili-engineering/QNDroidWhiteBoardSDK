@@ -223,6 +223,14 @@ class RoomViewModel(val app: Application) : AndroidViewModel(app) {
             override fun onWidgetActionEvent(event: WidgetActionEvent) {
                 Log.d(TAG, "onWidgetActionEvent $event")
             }
+
+             override fun onPageCleaned(pageId: String) {
+                 Log.d(TAG, "onPageCleaned ${pageId}")
+             }
+
+             override fun onFileScrolled(info: WidgetScrollInfo) {
+                 Log.d(TAG, "onFileScrolled ${info.scrollToBottom} ${info.scrollToTop}   ")
+             }
         })
     }
 
