@@ -335,6 +335,9 @@ class MyApplication : Application(){
 |[onWidgetActionEvent](#onwidgetactionevent)|widget被执行了某些关键动作|
 |[onRecoveryStateChanged](#onrecoverystatechanged)|笔迹回收站状态变化|
 
+|[onPageCleaned](#onPageCleaned)|清屏成功回调|
+|[onFileScrolled](#onFileScrolle)|文件滑动回调|
+
 
 # QNWhiteBoard
 
