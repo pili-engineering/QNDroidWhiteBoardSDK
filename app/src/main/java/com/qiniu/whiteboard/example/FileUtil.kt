@@ -3,10 +3,12 @@ package com.qiniu.whiteboard.example
 import android.content.Context
 import android.net.Uri
 import android.os.Build
+import android.provider.MediaStore
 import android.provider.OpenableColumns
 import androidx.core.content.FileProvider
 import androidx.core.net.toUri
 import java.io.File
+
 
 /**
  * 解析FileProvider的工具
@@ -24,7 +26,11 @@ object FileUtil {
             context.contentResolver.openInputStream(uri)?.use { inputStream ->
                 val suffix = getFileExtension(getFileName(context, uri))
 
-                val file = File.createTempFile("document", suffix, context.externalCacheDir ?: context.cacheDir)
+                val file = File.createTempFile(
+                    "document",
+                    suffix,
+                    context.externalCacheDir ?: context.cacheDir
+                )
 
                 file.outputStream().use {
                     inputStream.copyTo(it)
@@ -42,6 +48,11 @@ object FileUtil {
         context.contentResolver.query(uri, null, null, null, null, null)?.use { cursor ->
             if (cursor.moveToFirst()) {
                 fileName = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME))
+                if(fileName==null){
+                    val dataIndex = cursor
+                        .getColumnIndex(MediaStore.Files.FileColumns.DATA)
+                    fileName = cursor.getString(dataIndex);
+                }
             }
         }
         return fileName
