@@ -6,6 +6,8 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d283ce9b0ad6437df88bfe679c7f967c/jetified-alertdialog-appcompat-debug/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.louiscad.splitties/splitties-alertdialog-appcompat-android/3.0.0-beta01/1e3e417f99484088d94c092c6d1122bb23e89aa2/splitties-alertdialog-appcompat-android-3.0.0-beta01-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

@@ -6,6 +6,8 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bf92f25deeea6419a7b88e68c1f890a7/jetified-dimensions-debug/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.louiscad.splitties/splitties-dimensions-android/3.0.0-beta01/f6d025a1d7842ca08f57dbac0309e62fe3f3dea2/splitties-dimensions-android-3.0.0-beta01-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

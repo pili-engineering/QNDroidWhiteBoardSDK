@@ -6,6 +6,8 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6b845386a733959fe92d936235cb8876/jetified-activities-debug/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.louiscad.splitties/splitties-activities-android/3.0.0-beta01/405e4272550b4c746de636145043b635f7303011/splitties-activities-android-3.0.0-beta01-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
