@@ -20,10 +20,13 @@ class MainActivity : AppCompatActivity() {
 
     private var mRoomTokenEditText: EditText? = null
 
-    var token1 = "QxZugR8TAhI38AiJ_cptTl3RbzLyca3t-AAiH-Hh:srRQTXJzBogXrXVMq-FUSOdER3c=:eyJhcHBJZCI6ImQ4ZHJlOHcxcCIsImV4cGlyZUF0IjoxNjYxNTcxNzAzLCJwZXJtaXNzaW9uIjoidXNlciIsInJvb21OYW1lIjoiMTIzIiwidXNlcklkIjoiMTIzMzMifQ=="
-       //debug "QxZugR8TAhI38AiJ_cptTl3RbzLyca3t-AAiH-Hh:HX9jtooyqlqyq0iN9ERM2H-i1S0=:eyJhcHBJZCI6ImQ4ZHJlOHcxcCIsImV4cGlyZUF0IjoxNjI3NzA0NDA0LCJwZXJtaXNzaW9uIjoidXNlciIsInJvb21OYW1lIjoiMTIzNCIsInVzZXJJZCI6ImFkc2FkYWRhZCJ9"
-    var token2 = "QxZugR8TAhI38AiJ_cptTl3RbzLyca3t-AAiH-Hh:yvaLyhyuhN54013ESzodkpxJ0BI=:eyJhcHBJZCI6ImQ4ZHJlOHcxcCIsImV4cGlyZUF0IjoxNjYxNTcxNzAzLCJwZXJtaXNzaW9uIjoidXNlciIsInJvb21OYW1lIjoiMTIzIiwidXNlcklkIjoiMTJlcWUifQ=="
-           // "QxZugR8TAhI38AiJ_cptTl3RbzLyca3t-AAiH-Hh:9ifJL3qnKSTAwuA1iPmDuOgnkRY=:eyJhcHBJZCI6ImQ4ZHJlOHcxcCIsImV4cGlyZUF0IjoxNjI3NzA0NDYwLCJwZXJtaXNzaW9uIjoidXNlciIsInJvb21OYW1lIjoiMTIzNCIsInVzZXJJZCI6ImFkc2Fkc2Fkc2EifQ=="
+    var token1 =
+        "QxZugR8TAhI38AiJ_cptTl3RbzLyca3t-AAiH-Hh:srRQTXJzBogXrXVMq-FUSOdER3c=:eyJhcHBJZCI6ImQ4ZHJlOHcxcCIsImV4cGlyZUF0IjoxNjYxNTcxNzAzLCJwZXJtaXNzaW9uIjoidXNlciIsInJvb21OYW1lIjoiMTIzIiwidXNlcklkIjoiMTIzMzMifQ=="
+
+    //debug "QxZugR8TAhI38AiJ_cptTl3RbzLyca3t-AAiH-Hh:HX9jtooyqlqyq0iN9ERM2H-i1S0=:eyJhcHBJZCI6ImQ4ZHJlOHcxcCIsImV4cGlyZUF0IjoxNjI3NzA0NDA0LCJwZXJtaXNzaW9uIjoidXNlciIsInJvb21OYW1lIjoiMTIzNCIsInVzZXJJZCI6ImFkc2FkYWRhZCJ9"
+    var token2 =
+        "QxZugR8TAhI38AiJ_cptTl3RbzLyca3t-AAiH-Hh:yvaLyhyuhN54013ESzodkpxJ0BI=:eyJhcHBJZCI6ImQ4ZHJlOHcxcCIsImV4cGlyZUF0IjoxNjYxNTcxNzAzLCJwZXJtaXNzaW9uIjoidXNlciIsInJvb21OYW1lIjoiMTIzIiwidXNlcklkIjoiMTJlcWUifQ=="
+    // "QxZugR8TAhI38AiJ_cptTl3RbzLyca3t-AAiH-Hh:9ifJL3qnKSTAwuA1iPmDuOgnkRY=:eyJhcHBJZCI6ImQ4ZHJlOHcxcCIsImV4cGlyZUF0IjoxNjI3NzA0NDYwLCJwZXJtaXNzaW9uIjoidXNlciIsInJvb21OYW1lIjoiMTIzNCIsInVzZXJJZCI6ImFkc2Fkc2Fkc2EifQ=="
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,25 +34,28 @@ class MainActivity : AppCompatActivity() {
         mRoomTokenEditText = findViewById(R.id.room_token_edit_text)
         findViewById<View>(R.id.buttonToken1).setOnClickListener { v ->
             mRoomTokenEditText?.setText(token1)
-            joinRoom(v)
+            joinRoom(v,  0.5)
         }
         findViewById<View>(R.id.buttonToken2).setOnClickListener { v ->
-            mRoomTokenEditText?.setText(token2)
-            joinRoom(v)
+            mRoomTokenEditText?.setText(token1)
+            joinRoom(v, 0.6)
+        }
+        findViewById<View>(R.id.btnJoin).setOnClickListener { v ->
+            joinRoom(v, 0.5)
         }
     }
 
-    fun joinRoom(view: View?) {
-
-        val token = mRoomTokenEditText?.text?.toString()?:""
-        if(TextUtils.isEmpty(token)){
+    fun joinRoom(view: View?,  widthHeight: Double) {
+        val token = mRoomTokenEditText?.text?.toString() ?: ""
+        if (TextUtils.isEmpty(token)) {
             return
         }
         // 加入房间
         val params = JoinConfig(
-            mRoomTokenEditText?.text?.toString()?:""
+            mRoomTokenEditText?.text?.toString() ?: ""
         ).apply {
-            widthHeightThan=0.4
+            title = findViewById<EditText>(R.id.room_name_edit_text).text.toString()
+            widthHeightThan = widthHeight
         }
         start<RoomActivity> {
             putExtra(RoomActivity.ROOM_DATA_TAG, params)
