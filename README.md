@@ -7,10 +7,9 @@
 ### 依赖配置
 ```java
     implementation (name:'qndroid-whiteboard-xxx',ext:"aar") //白板
-    implementation("com.squareup.okhttp3:okhttp:x.x.x")//需要依赖okhttp
-    implementation ('com.qiniu:happy-dns:x.x.x') //需要依赖happy-dns
-    implementation ('com.aliyun.dpa:oss-android-sdk:x.x.x')
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:x.x.x"
+        implementation("com.squareup.okhttp3:okhttp:x.x.x")//需要依赖okhttp
+        implementation ('com.aliyun.dpa:oss-android-sdk:x.x.x')
+        implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:x.x.x"
 ```
 
 ```gradle
@@ -652,7 +651,7 @@ office文件需要在线转换格式，所以画面呈现会相对慢一些。
 也可以监听[onBoardStatusChanged](#onboardstatuschanged)。
 
 - 返回
-    - 当前的白板状态[BoardStatus](#boardstatus)。
+  - 当前的白板状态[BoardStatus](#boardstatus)。
 
 ### getRoom
 
@@ -663,7 +662,7 @@ office文件需要在线转换格式，所以画面呈现会相对慢一些。
 与监听[onJoinSuccess](#onjoinsuccess)获得的信息一致。
 
 - 返回
-    - 房间信息[Room](#room)，如果未加入房间则会返回null。
+  - 房间信息[Room](#room)，如果未加入房间则会返回null。
 
 ### getMe
 
@@ -674,7 +673,7 @@ office文件需要在线转换格式，所以画面呈现会相对慢一些。
 与监听[onJoinSuccess](#onjoinsuccess)获得的信息一致。
 
 - 返回
-    - 自己的成员信息[RoomMember](#roommember)，如果未加入房间则会返回null。
+  - 自己的成员信息[RoomMember](#roommember)，如果未加入房间则会返回null。
 
 ### getUsers
 
@@ -685,7 +684,7 @@ office文件需要在线转换格式，所以画面呈现会相对慢一些。
 此列表与监听[onUserList](#onuserlist)，[onUserJoin](#onuserjoin)，[onUserLeave](#onuserleave)收集获得的列表一致。
 
 - 返回
-    - 一个只读的[RoomMember](#roommember)成员信息列表，如果未加入房间则会返回空列表。
+  - 一个只读的[RoomMember](#roommember)成员信息列表，如果未加入房间则会返回空列表。
 
 ### getPageList
 
@@ -696,7 +695,7 @@ office文件需要在线转换格式，所以画面呈现会相对慢一些。
 此列表与监听[onBoardPageList](#onboardpagelist)，[onBoardPageInfoChanged](#onboardpageinfochanged)处理后获得的列表一致。
 
 - 返回
-    - 一个只读的[WhiteBoardPage](#whiteboardpage)白板页信息列表，如果未加入房间则会返回空列表。
+  - 一个只读的[WhiteBoardPage](#whiteboardpage)白板页信息列表，如果未加入房间则会返回空列表。
 
 ### getCurrentPage
 
@@ -707,7 +706,7 @@ office文件需要在线转换格式，所以画面呈现会相对慢一些。
 此信息与监听[onCurrentBoardPageChanged](#oncurrentboardpagechanged)获得的信息一致。
 
 - 返回
-    - 当前白板页信息[WhiteBoardPage](#whiteboardpage)，如果未加入房间则会返回null。
+  - 当前白板页信息[WhiteBoardPage](#whiteboardpage)，如果未加入房间则会返回null。
 
 ### getBackgroundColor
 
@@ -720,7 +719,7 @@ office文件需要在线转换格式，所以画面呈现会相对慢一些。
 默认背景色由服务器创建房间时指定。
 
 - 返回
-    - 当前白板页颜色值，如果未加入房间则会返回一个固定值`Color.LTGRAY`。
+  - 当前白板页颜色值，如果未加入房间则会返回一个固定值`Color.LTGRAY`。
 
 ### getInputConfig
 
@@ -729,7 +728,7 @@ office文件需要在线转换格式，所以画面呈现会相对慢一些。
 获取白板当前的输入模式
 
 - 返回
-    - 通过[setInputMode](#setinputmode)设置的[InputConfig](#inputconfig)，如果未加入房间则会返回默认配置，默认值可通过[setDefaultInputMode](#setdefaultinputmode)设置。
+  - 通过[setInputMode](#setinputmode)设置的[InputConfig](#inputconfig)，如果未加入房间则会返回默认配置，默认值可通过[setDefaultInputMode](#setdefaultinputmode)设置。
 
 ### getActiveWidget
 
@@ -740,7 +739,7 @@ office文件需要在线转换格式，所以画面呈现会相对慢一些。
 此信息与监听[onWidgetActive](#onwidgetactive)获得的数据一致。
 
 - 返回
-    - [ActiveWidgetInfo](#activewidgetinfo)，如果当前用户没有操作过任何widget或者用户未加入房间则会返回null。
+  - [ActiveWidgetInfo](#activewidgetinfo)，如果当前用户没有操作过任何widget或者用户未加入房间则会返回null。
 
 ### canRecovery
 
@@ -751,7 +750,7 @@ office文件需要在线转换格式，所以画面呈现会相对慢一些。
 此值与监听[onRecoveryStateChanged](#onrecoverystatechanged)回调获取的值一致。
 
 - 返回
-    - 如果为true表示有可还原的笔迹，此时可通过调用[recover](#recover)来还原一次擦除操作。false时调用[recover](#recover)无效。
+  - 如果为true表示有可还原的笔迹，此时可通过调用[recover](#recover)来还原一次擦除操作。false时调用[recover](#recover)无效。
 
 ### getViewport
 
@@ -763,7 +762,7 @@ office文件需要在线转换格式，所以画面呈现会相对慢一些。
 滚动白板可由用户双指手势拖动白板，也可通过程序主动调用[scroll](#scroll)完成。
 
 - 返回
-    - 白板的可视区[WhiteBoardViewport](#whiteboardviewport)，通常此值是跟随用户滚动白板而变化，如果未加入房间则会返回固定值[WhiteBoardViewport.IDLE](#whiteboardviewportidle)。
+  - 白板的可视区[WhiteBoardViewport](#whiteboardviewport)，通常此值是跟随用户滚动白板而变化，如果未加入房间则会返回固定值[WhiteBoardViewport.IDLE](#whiteboardviewportidle)。
 
 
 # QNWhiteBoardListener
@@ -1084,19 +1083,22 @@ widget被执行了某些关键动作
 加入房间时的参数配置
 
 构造函数
-    - `public JoinConfig( @NonNull String token)`
+- `public JoinConfig( @NonNull String token)`
 
 |参数|类型|可空|描述|
 |----|----|----|----|
-|appId|String|否|SDK分配的应用id|
-|roomId|String|否|白板的房间id，房间通常由服务器创建|
-|userId|String|否|用户业务系统中的稳定用户id|
+
 |token|String|否|每次加入房间时生成的标识符，与appId，roomId，userId关联，通常由服务器生成|
 |roleId|int|否|角色id，默认为0，通常用来标识此用户身份，方便定制用户权限系统|
 |sessionId|String|是|用户会话id，用于唯一标识用户，如果用户业务系统中有与userId对应的临时用户标识符，比如session或token等，此临时id可以在此传递，如果userId相同但是sessionId不同的两个用户加入了白板，可以视为相同用户的多设备加入白板实现，如果留空则白板会自动生成一个|
 |nickname|String|是|用户名或昵称，在白板中使用的用户名称|
 |avatar|String|是|用户头像地址，在白板中显示的用户头像|
 |widthHeightThan|double|是|白板宽高比 范围[0.5,2.2] 默认0.5|
+|limitNumber|int|是|人数限制,0代表不限制：如果 >0，代表白板内最多limitNumber个人，只要白板内人数超过limitNumber数量时，就会进不去,默认0|
+|boardSizeId|int|是|创建的白板(meeting)的大小。有三个可选值：1,2,3 1代表白板是2x2, 2代表白板是3x3, 3代表白板是1x3 默认3|
+|bgColor|int|是| 表示白板(meeting)的颜色。也有三个值可选: 1,2,3 1 代表白色，2 代表黑色，3 代表绿色。 默认1|
+|zoomScale|int|是| zoomScale 扩展比 1～5之间 非必填 默认1|
+|title|String|是| 白板标题(长度 1 ~ 20 支持数字、字符、下划线_)，相同的RTC房间，如果title相同，则进相同的房间，一个RTC房间可以有多个白板房间，标题不同就会生成新的， 该字段非必填|
 
 ## InputConfig
 
@@ -1161,10 +1163,10 @@ widget被执行了某些关键动作
 向白板插入文件时描述文件信息的配置
 
 构造函数
-    - `public FileConfig(@NonNull File file)`
-    - `public FileConfig(@NonNull File file , @Nullable String name)`
-    - `public FileConfig(@NonNull File file , @Nullable String name , float left , float top)`
-    - `public FileConfig(@NonNull File file , @Nullable String name , float left , float top , int boxWidth , int boxHeight)`
+- `public FileConfig(@NonNull File file)`
+- `public FileConfig(@NonNull File file , @Nullable String name)`
+- `public FileConfig(@NonNull File file , @Nullable String name , float left , float top)`
+- `public FileConfig(@NonNull File file , @Nullable String name , float left , float top , int boxWidth , int boxHeight)`
 
 |参数|类型|可空|描述|
 |----|----|----|----|
