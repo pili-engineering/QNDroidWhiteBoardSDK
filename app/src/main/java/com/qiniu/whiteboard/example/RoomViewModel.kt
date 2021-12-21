@@ -197,10 +197,10 @@ class RoomViewModel(val app: Application) : AndroidViewModel(app) {
                 Log.d(TAG, "onJoinSuccess")
             }
 
-            override fun onJoinFailed(errorCode: Int) {
+            override fun onJoinFailed(errorCode: Int,msg:String) {
                 Log.d(TAG, "onJoinFailed $errorCode")
                 GlobalScope.launch (Dispatchers.Main){
-                    Toast.makeText(app,"加入房间失败",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(app,"加入房间失败 ${errorCode} ${msg}",Toast.LENGTH_SHORT).show()
                 }
             }
 
