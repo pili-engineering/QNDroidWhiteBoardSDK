@@ -101,7 +101,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:okhttp3-integration:4.12.0'
     implementation("com.squareup.okhttp3:okhttp:4.8.1")
     implementation ('com.qiniu:happy-dns:0.2.17')
-    implementation (name:'qndroid-whiteboard-1.1.6',ext:"aar")
+    implementation (name:'qndroid-whiteboard-1.1.7',ext:"aar")
    // implementation project(":qiniuwhiteboard")
     implementation ('com.aliyun.dpa:oss-android-sdk:2.9.6')
     implementation 'cn.yipianfengye.android:zxing-library:2.2'
