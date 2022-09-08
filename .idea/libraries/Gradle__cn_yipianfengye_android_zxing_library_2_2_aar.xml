@@ -21,6 +21,14 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f6d441967b3e9d7bb6c876686ff923a8/jetified-zxing-library-2.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f6d441967b3e9d7bb6c876686ff923a8/jetified-zxing-library-2.2/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f6d441967b3e9d7bb6c876686ff923a8/jetified-zxing-library-2.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e8f68e2c59ca889e218a8d4ae598829c/jetified-zxing-library-2.2/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e8f68e2c59ca889e218a8d4ae598829c/jetified-zxing-library-2.2/jars/libs/core_3.0.1.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e8f68e2c59ca889e218a8d4ae598829c/jetified-zxing-library-2.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e8f68e2c59ca889e218a8d4ae598829c/jetified-zxing-library-2.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc41cfbc68832a94950440bc93555f07/jetified-zxing-library-2.2/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc41cfbc68832a94950440bc93555f07/jetified-zxing-library-2.2/jars/libs/core_3.0.1.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc41cfbc68832a94950440bc93555f07/jetified-zxing-library-2.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc41cfbc68832a94950440bc93555f07/jetified-zxing-library-2.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.yipianfengye.android/zxing-library/2.2/48a2d586331e558d22e2885759ebc4c12727c752/zxing-library-2.2-javadoc.jar!/" />
