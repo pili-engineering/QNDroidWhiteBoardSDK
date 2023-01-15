@@ -7,26 +7,17 @@
 ### 依赖配置
 ```java
     implementation (name:'qndroid-whiteboard-xxx',ext:"aar") //白板
-        implementation("com.squareup.okhttp3:okhttp:x.x.x")//需要依赖okhttp
-        implementation ('com.aliyun.dpa:oss-android-sdk:x.x.x')
-        implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:x.x.x"
+    implementation("com.squareup.okhttp3:okhttp:x.x.x")//需要依赖okhttp
+    implementation ('com.aliyun.dpa:oss-android-sdk:x.x.x')
 ```
 
 ```gradle
-
-
 android {
     defaultConfig{
         // 当前仅支持arm架构
         ndk {
             abiFilters 'armeabi-v7a' , 'arm64-v8a'
         }
-    }
-
-    // 开启java8支持
-    compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_8
-            targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 ```
@@ -51,11 +42,9 @@ class MyApplication : Application(){
 例如：
 
 ```xml
-
 <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
     ...
 
    <com.qiniu.droid.whiteboard.QNWhiteBoardView
@@ -69,7 +58,6 @@ class MyApplication : Application(){
                 app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
 ```
 
 实例中通过`app:layout_constraintDimensionRatio`参数设定宽高比，比例中的数字时白板的虚拟大小，决定了白板中内容的坐标系。
@@ -113,9 +101,6 @@ class MyApplication : Application(){
         super.onDestroy()
     }
 ```
-
-
-
 ### 自定义控制面板UI
 
  ```xml
